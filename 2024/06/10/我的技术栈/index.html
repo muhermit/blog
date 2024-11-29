@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Hello World | Hexo</title>
-    <meta name="author" content="John Doe" />
-    <meta name="description" content="" />
+    <title>我的技术栈 | 小四の博客</title>
+    <meta name="author" content="小四" />
+    <meta name="description" content="最近要把博客进行大更新，所以之前的文章删除了一部分，更新完会再放回来的" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
@@ -63,7 +63,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>HEXO</span>
+            <span>小四の博客</span>
         </a>
         
         <a href="/">
@@ -95,7 +95,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;HEXO</span>
+            <span>&emsp;小四の博客</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -156,33 +156,55 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Hello World</h1>
+        <h1>我的技术栈</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/11/29
+            2024/6/10
         </span>
         
         
     </div>
     
     <div class="content" v-pre>
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>我的技术栈包括了从开发工具到数据库，从后端框架到容器化管理的全方位技术支持。我能够熟练使用 <strong>IDEA</strong> 和 <strong>VS Code</strong> 进行开发，利用 <strong>Maven</strong> 管理项目，结合 <strong>Spring</strong> 和 <strong>Spring Boot</strong> 开发高效、可扩展的应用程序。通过 <strong>MyBatis-Plus</strong> 简化数据库操作，并在 <strong>MySQL</strong> 数据库中实现高效的数据持久化管理。同时，熟练使用 <strong>Tomcat</strong> 作为Web容器，结合 <strong>Docker</strong> 进行应用容器化，确保开发与部署的高效性与一致性。这些技术栈不仅让我具备了扎实的开发能力，也让我在开发中能够更加高效地处理复杂的业务需求和技术挑战。</p>
+<h2 id="技术栈介绍"><a href="#技术栈介绍" class="headerlink" title="技术栈介绍"></a>技术栈介绍</h2><ul>
+<li><h4 id="1-开发工具"><a href="#1-开发工具" class="headerlink" title="1. 开发工具"></a>1. <strong>开发工具</strong></h4><ul>
+<li>**IDEA (IntelliJ IDEA)**：作为主力开发工具，IDEA具备强大的代码自动补全、调试和测试功能，极大提高了开发效率。我熟悉使用IDEA进行Java项目的开发、调试和版本控制。</li>
+<li><strong>VS Code</strong>：作为轻量级的代码编辑器，VS Code支持多种语言和插件扩展，适用于快速开发和调试，尤其在处理Web前端和轻量级后端服务时表现出色。</li>
+</ul>
+<h4 id="2-项目管理与构建"><a href="#2-项目管理与构建" class="headerlink" title="2. 项目管理与构建"></a>2. <strong>项目管理与构建</strong></h4><ul>
+<li><strong>Maven</strong>：我熟练使用Maven进行项目管理，尤其擅长使用Maven进行依赖管理、构建、打包和发布。Maven简化了项目的构建过程，确保了项目的一致性和可维护性，适用于多模块项目的管理。</li>
+</ul>
+<h4 id="3-Java基础编程"><a href="#3-Java基础编程" class="headerlink" title="3. Java基础编程"></a>3. <strong>Java基础编程</strong></h4><ul>
+<li><strong>Java语言基础</strong>：我具备扎实的Java基础，熟悉面向对象编程（OOP）、集合框架、多线程、异常处理、文件IO等核心知识，并能够在开发中灵活应用这些技术。</li>
+</ul>
+<h4 id="4-Spring框架"><a href="#4-Spring框架" class="headerlink" title="4. Spring框架"></a>4. <strong>Spring框架</strong></h4><ul>
+<li><strong>Spring框架</strong>：我深入理解Spring框架，能够使用Spring的依赖注入（DI）和面向切面编程（AOP）等功能来设计高效、解耦的企业级应用。通过Spring的管理和事务控制，能够提升代码的可维护性和扩展性。</li>
+</ul>
+<h4 id="5-Spring-Boot"><a href="#5-Spring-Boot" class="headerlink" title="5. Spring Boot"></a>5. <strong>Spring Boot</strong></h4><ul>
+<li><strong>Spring Boot</strong>：熟练使用Spring Boot构建快速、稳定的Spring应用。Spring Boot通过自动配置和开箱即用的功能，简化了项目配置和部署流程，使我能够专注于业务逻辑的开发，快速交付高质量的应用。</li>
+</ul>
+<h4 id="6-MyBatis-Plus"><a href="#6-MyBatis-Plus" class="headerlink" title="6. MyBatis-Plus"></a>6. <strong>MyBatis-Plus</strong></h4><ul>
+<li><strong>MyBatis-Plus</strong>：我熟悉使用MyBatis-Plus简化数据持久化操作，能够快速完成基本的CRUD功能，并通过其强大的条件构造器和分页插件简化查询逻辑，提高了开发效率。</li>
+</ul>
+<h4 id="7-数据库与持久化"><a href="#7-数据库与持久化" class="headerlink" title="7. 数据库与持久化"></a>7. <strong>数据库与持久化</strong></h4><ul>
+<li><strong>MySQL</strong>：我熟练使用MySQL进行数据建模和管理，能够编写高效的SQL语句，优化数据库性能，设计数据表关系以及执行数据库迁移等操作。同时，熟悉MySQL的索引、事务处理、视图等高级功能，确保数据库的高可用性和高性能。</li>
+</ul>
+<h4 id="8-Web应用与容器"><a href="#8-Web应用与容器" class="headerlink" title="8. Web应用与容器"></a>8. <strong>Web应用与容器</strong></h4><ul>
+<li><strong>Tomcat</strong>：我熟悉Tomcat作为Java Web服务器的配置与使用，能够在Tomcat上部署和调试Spring Boot应用。熟悉Tomcat的日志管理、连接池配置和性能优化，确保Web应用的稳定运行。</li>
+</ul>
+<h4 id="9-容器化与自动化部署"><a href="#9-容器化与自动化部署" class="headerlink" title="9. 容器化与自动化部署"></a>9. <strong>容器化与自动化部署</strong></h4><ul>
+<li><strong>Docker</strong>：我掌握Docker容器技术，能够使用Docker进行应用的容器化部署，确保开发、测试和生产环境的一致性。通过Docker，能够轻松打包、分发和部署应用程序，提升开发效率，并支持微服务架构的容器化管理。</li>
+</ul>
+<h4 id="10-版本控制"><a href="#10-版本控制" class="headerlink" title="10. 版本控制"></a>10. <strong>版本控制</strong></h4><ul>
+<li><strong>Git</strong>：我熟练使用Git进行版本控制，能够高效管理代码版本、进行代码分支管理、解决冲突，并通过Git进行团队协作开发。Git帮助我在多人的开发环境中保证代码的稳定性和可追溯性。</li>
+</ul>
+</li>
+</ul>
 
     </div>
     
@@ -198,11 +220,11 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2024 Hexo
+            2022 - 2024 小四の博客
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;John Doe
+            &commat;小四
         </div>
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
