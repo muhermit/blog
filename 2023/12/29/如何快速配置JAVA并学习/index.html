@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>如何快速配置JAVA并学习 | 小四の博客</title>
+    <meta name="author" content="小四" />
+    <meta name="description" content="最近要把博客进行大更新，所以之前的文章删除了一部分，更新完会再放回来的" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>小四の博客</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;小四の博客</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>如何快速配置JAVA并学习</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/12/29
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="如何学习并配置-Java-环境"><a href="#如何学习并配置-Java-环境" class="headerlink" title="如何学习并配置 Java 环境"></a>如何学习并配置 Java 环境</h1><p>Java 是一种广泛使用的编程语言，广泛应用于企业级应用、Web 开发、移动开发（Android）、大数据处理等多个领域。学习 Java 编程语言的第一步是配置开发环境。本文将介绍如何学习 Java 以及如何在不同操作系统上配置 Java 开发环境。</p>
+<h2 id="1-学习-Java-的步骤"><a href="#1-学习-Java-的步骤" class="headerlink" title="1. 学习 Java 的步骤"></a>1. 学习 Java 的步骤</h2><p>学习 Java 语言并掌握其基础概念是成为 Java 开发者的第一步。以下是学习 Java 的几个关键步骤：</p>
+<h3 id="1-1-理解-Java-基础"><a href="#1-1-理解-Java-基础" class="headerlink" title="1.1 理解 Java 基础"></a>1.1 理解 Java 基础</h3><p>在学习 Java 时，首先要理解语言的基础：</p>
+<ul>
+<li><strong>数据类型</strong>：基本数据类型（如 int, float, boolean 等）和引用数据类型（如 String, Arrays 等）</li>
+<li><strong>控制流</strong>：了解条件语句（if, switch）和循环语句（for, while）</li>
+<li><strong>面向对象编程</strong>：掌握类与对象、继承、封装、多态和抽象等概念</li>
+<li><strong>集合框架</strong>：学习 List、Set、Map 等数据结构的使用</li>
+<li><strong>异常处理</strong>：了解 try-catch 语句、抛出异常、自定义异常等</li>
+<li><strong>输入输出</strong>：掌握文件读写和流的概念</li>
+</ul>
+<h3 id="1-2-学习开发工具"><a href="#1-2-学习开发工具" class="headerlink" title="1.2 学习开发工具"></a>1.2 学习开发工具</h3><p>在学习 Java 语言的同时，熟悉常用的开发工具也至关重要：</p>
+<ul>
+<li><strong>IDE</strong>（集成开发环境）：如 IntelliJ IDEA、Eclipse 或 VS Code，选择一个你喜欢的 IDE 来编写代码。</li>
+<li><strong>版本控制</strong>：学习使用 Git 来管理代码版本。</li>
+<li><strong>构建工具</strong>：学习使用 Maven 或 Gradle 来管理项目的依赖关系和构建过程。</li>
+</ul>
+<h3 id="1-3-深入理解-Java-核心库"><a href="#1-3-深入理解-Java-核心库" class="headerlink" title="1.3 深入理解 Java 核心库"></a>1.3 深入理解 Java 核心库</h3><ul>
+<li><strong>Java 标准库</strong>：学习 Java 中的常用库，如 java.util、java.io、java.net 等，这些库是日常开发中常用的基础工具。</li>
+<li><strong>JVM</strong>（Java Virtual Machine）：理解 JVM 的工作原理，包括内存管理、垃圾回收（GC）等，有助于优化代码和排除性能瓶颈。</li>
+</ul>
+<h3 id="1-4-实践项目"><a href="#1-4-实践项目" class="headerlink" title="1.4 实践项目"></a>1.4 实践项目</h3><p>通过实践来巩固你对 Java 的理解。你可以选择一些小项目进行练习，例如：</p>
+<ul>
+<li><strong>命令行工具</strong>：编写一些简单的命令行工具，处理文件输入输出，解析数据等。</li>
+<li><strong>Web 应用开发</strong>：学习 Spring Boot，编写简单的 Web 应用，理解前后端分离的开发模式。</li>
+</ul>
+<h2 id="2-配置-Java-开发环境"><a href="#2-配置-Java-开发环境" class="headerlink" title="2. 配置 Java 开发环境"></a>2. 配置 Java 开发环境</h2><p>要开始 Java 编程，首先需要配置 Java 开发环境。下面是如何在不同操作系统上安装和配置 Java 开发环境的步骤。</p>
+<h3 id="2-1-安装-JDK（Java-Development-Kit）"><a href="#2-1-安装-JDK（Java-Development-Kit）" class="headerlink" title="2.1 安装 JDK（Java Development Kit）"></a>2.1 安装 JDK（Java Development Kit）</h3><p>JDK 是 Java 开发工具包，包含了开发 Java 应用所需的工具和库。我们首先需要安装 JDK。</p>
+<h4 id="在-Windows-上安装-JDK"><a href="#在-Windows-上安装-JDK" class="headerlink" title="在 Windows 上安装 JDK"></a>在 Windows 上安装 JDK</h4><ol>
+<li><p><strong>下载 JDK</strong>：</p>
+<ul>
+<li>访问 <a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Oracle 官方 JDK 下载页面</a> 或选择其他版本的 JDK 发行版，如 OpenJDK。</li>
+<li>下载适合 Windows 操作系统的 JDK 安装包（.exe 文件）。</li>
+</ul>
+</li>
+<li><p><strong>安装 JDK</strong>：</p>
+<ul>
+<li>双击下载的安装文件，按照安装向导的指示完成安装。</li>
+<li>记住 JDK 安装目录，通常是类似 <code>C:\Program Files\Java\jdk-11.x.x</code> 的路径。</li>
+</ul>
+</li>
+<li><p><strong>配置环境变量</strong>：</p>
+<ul>
+<li>打开控制面板，选择“系统和安全” -&gt; “系统” -&gt; “高级系统设置”。</li>
+<li>在“系统属性”窗口中，点击“环境变量”。</li>
+<li>在“系统变量”部分，点击“新建”来添加以下两个变量：<ul>
+<li><strong>JAVA_HOME</strong>：变量值为 JDK 的安装目录，如 <code>C:\Program Files\Java\jdk-11.x.x</code>。</li>
+<li><strong>Path</strong>：在原有 Path 变量的基础上，添加 <code>C:\Program Files\Java\jdk-11.x.x\bin</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>验证安装</strong>：</p>
+<ul>
+<li>打开命令提示符，输入以下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+如果安装成功，你将看到 Java 版本信息。</li>
+</ul>
+</li>
+</ol>
+<h4 id="在-macOS-上安装-JDK"><a href="#在-macOS-上安装-JDK" class="headerlink" title="在 macOS 上安装 JDK"></a>在 macOS 上安装 JDK</h4><ol>
+<li><p><strong>使用 Homebrew 安装 JDK</strong>：</p>
+<ul>
+<li>如果你没有安装 Homebrew，请访问 <a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew 官网</a> 安装。</li>
+<li>使用以下命令安装 JDK：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install openjdk@11</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>配置环境变量</strong>：</p>
+<ul>
+<li><p>安装后，可以通过以下命令将 JDK 添加到环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;/usr/local/opt/openjdk@11/bin:<span class="variable">$PATH</span>&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>验证安装</strong>：</p>
+<ul>
+<li>通过以下命令验证安装：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h4 id="在-Linux-上安装-JDK"><a href="#在-Linux-上安装-JDK" class="headerlink" title="在 Linux 上安装 JDK"></a>在 Linux 上安装 JDK</h4><ol>
+<li><p><strong>使用包管理器安装 JDK</strong>：</p>
+<ul>
+<li>对于 Debian&#x2F;Ubuntu 系统，运行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install openjdk-11-jdk</span><br></pre></td></tr></table></figure></li>
+<li>对于 CentOS&#x2F;RHEL 系统，运行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum install java-11-openjdk-devel</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>验证安装</strong>：</p>
+<ul>
+<li>通过以下命令检查 Java 版本：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="2-2-配置-IDE（IntelliJ-IDEA-或-VS-Code）"><a href="#2-2-配置-IDE（IntelliJ-IDEA-或-VS-Code）" class="headerlink" title="2.2 配置 IDE（IntelliJ IDEA 或 VS Code）"></a>2.2 配置 IDE（IntelliJ IDEA 或 VS Code）</h3><h4 id="配置-IntelliJ-IDEA"><a href="#配置-IntelliJ-IDEA" class="headerlink" title="配置 IntelliJ IDEA"></a>配置 IntelliJ IDEA</h4><ol>
+<li><p><strong>下载并安装 IntelliJ IDEA</strong>：</p>
+<ul>
+<li>访问 <a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/">IntelliJ IDEA 官网</a> 下载并安装适合操作系统的版本。</li>
+</ul>
+</li>
+<li><p><strong>创建新项目</strong>：</p>
+<ul>
+<li>启动 IntelliJ IDEA，选择“Create New Project”。</li>
+<li>选择 Java，并选择合适的 JDK 版本。</li>
+<li>创建项目并开始编写 Java 代码。</li>
+</ul>
+</li>
+</ol>
+<h4 id="配置-VS-Code"><a href="#配置-VS-Code" class="headerlink" title="配置 VS Code"></a>配置 VS Code</h4><ol>
+<li><p><strong>安装 VS Code</strong>：</p>
+<ul>
+<li>访问 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">VS Code 官网</a> 下载并安装。</li>
+</ul>
+</li>
+<li><p><strong>安装 Java 扩展</strong>：</p>
+<ul>
+<li>启动 VS Code，打开扩展面板，搜索并安装 <code>Java Extension Pack</code>。</li>
+</ul>
+</li>
+<li><p><strong>配置 JDK</strong>：</p>
+<ul>
+<li>确保你的 JDK 配置正确，VS Code 会自动识别 Java 相关配置。</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-3-安装-Maven"><a href="#2-3-安装-Maven" class="headerlink" title="2.3 安装 Maven"></a>2.3 安装 Maven</h3><p>Maven 是一个自动化构建工具，广泛用于 Java 项目管理。</p>
+<ol>
+<li><p><strong>下载 Maven</strong>：</p>
+<ul>
+<li>访问 <a target="_blank" rel="noopener" href="https://maven.apache.org/download.cgi">Maven 官方网站</a> 下载最新版本的 Maven。</li>
+</ul>
+</li>
+<li><p><strong>配置环境变量</strong>：</p>
+<ul>
+<li>解压 Maven 文件，并在系统环境变量中添加 Maven 的 <code>bin</code> 目录。</li>
+</ul>
+</li>
+<li><p><strong>验证安装</strong>：</p>
+<ul>
+<li>打开终端或命令提示符，输入以下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -version</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h2 id="3-小结"><a href="#3-小结" class="headerlink" title="3. 小结"></a>3. 小结</h2><p>本文介绍了如何学习 Java 语言的基础知识以及如何配置 Java 开发环境。无论你是在 Windows、macOS 还是 Linux 系统上，安装 JDK 和配置开发工具的步骤都是相似的。通过掌握 Java 基础，熟悉开发工具和构建工具，你可以轻松入门并深入探索 Java 编程世界。</p>
+<p>希望本文能够帮助你顺利设置好开发环境并开始学习 Java 编程！</p>
+<hr>
+<p>通过这篇博客，你不仅可以帮助自己更好地理解学习 Java 的步骤，还能为其他刚开始学习 Java 的开发者提供帮助。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2024 小四の博客
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;小四
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
